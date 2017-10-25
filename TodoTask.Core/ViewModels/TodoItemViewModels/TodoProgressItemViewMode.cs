@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TodoTask.Core.ViewModels.TodoItemViewModels;
 
-namespace ApiExamples.Core.ViewModels.TodoItemViewModels
+namespace TodoTask.Core.ViewModels.TodoItemViewModels
 {
     public class TodoProgressItemViewMode : TodoItemViewModelBase
     {

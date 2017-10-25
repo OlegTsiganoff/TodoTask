@@ -1,4 +1,5 @@
 using MvvmCross.Platform.IoC;
+using TodoTask.Core.Helpers.Database;
 
 namespace TodoTask.Core
 {
@@ -12,6 +13,8 @@ namespace TodoTask.Core
                 .RegisterAsLazySingleton();
 
             RegisterAppStart<ViewModels.FirstViewModel>();
+            var dbCreator = new DBCreator();
+            dbCreator.FillDatabaseIfNeed();
         }
     }
 }

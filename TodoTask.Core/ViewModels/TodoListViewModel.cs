@@ -20,6 +20,7 @@ namespace TodoTask.Core.ViewModels
             AppearingCommand = new MvxAsyncCommand(AppearingExecute);
             DisappearingCommand = new MvxCommand(DisappearingExecute);
             BackCommand = new MvxCommand(BackExecute);
+            Items = new List<TodoItemViewModelBase>();
         }
         private async Task AppearingExecute()
         {
@@ -37,6 +38,9 @@ namespace TodoTask.Core.ViewModels
         {
         }
 
-
+        void FillListItems()
+        {
+            
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using TodoTask.Core.ViewModels.TodoItemViewModels;
 
-namespace ApiExamples.Core.ViewModels.TodoItemViewModels
+namespace TodoTask.Core.ViewModels.TodoItemViewModels
 {
     public class TodoSwitchItemViewModel : TodoItemViewModelBase
     {
