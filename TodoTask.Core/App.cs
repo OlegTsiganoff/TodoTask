@@ -11,10 +11,9 @@ namespace TodoTask.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-
-            RegisterAppStart<ViewModels.FirstViewModel>();
             var dbCreator = new DBCreator();
             dbCreator.FillDatabaseIfNeed();
+            RegisterAppStart<ViewModels.TodoListViewModel>();
         }
     }
 }

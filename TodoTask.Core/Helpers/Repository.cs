@@ -42,14 +42,16 @@ namespace TodoTask.Core.ViewModels.Helpers
         private IList<T> GetNextWeekItems<T>(DateTime startDateTime) where T : TodoItem, new ()
         {
             var connection = Mvx.Resolve<ISQLite>().GetConnection();
-            var items = connection.Table<T>().Where(x => x.DateTime > startDateTime && x.DateTime < startDateTime.AddDays(7));
+            var endDate = startDateTime.AddDays(7);
+            var items = connection.Table<T>().Where(x => x.DateTime > startDateTime && x.DateTime < endDate);
             return items.ToList();
         }
 
         private IList<T> GetPreviousWeekItems<T>(DateTime startDateTime) where T : TodoItem, new()
         {
             var connection = Mvx.Resolve<ISQLite>().GetConnection();
-            var items = connection.Table<T>().Where(x => x.DateTime < startDateTime && x.DateTime > startDateTime.AddDays(-7));
+            var endDate = startDateTime.AddDays(-7);
+            var items = connection.Table<T>().Where(x => x.DateTime < startDateTime && x.DateTime > endDate);
             return items.ToList();
         }
 

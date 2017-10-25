@@ -114,6 +114,9 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f050002
 			public const int MyButton = 2131034114;
 			
+			// aapt resource value: 0x7f050003
+			public const int listView = 2131034115;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -212,7 +215,16 @@ namespace TodoTask.Droid
 			public const int Test_WithErrors = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int TodoListView = 2130968604;
+			public const int TodoItem_Progress = 2130968604;
+			
+			// aapt resource value: 0x7f04001d
+			public const int TodoItem_Switch = 2130968605;
+			
+			// aapt resource value: 0x7f04001e
+			public const int TodoItem_Text = 2130968606;
+			
+			// aapt resource value: 0x7f04001f
+			public const int TodoListView = 2130968607;
 			
 			static Layout()
 			{

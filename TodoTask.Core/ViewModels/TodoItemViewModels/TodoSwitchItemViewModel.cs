@@ -4,11 +4,11 @@ namespace TodoTask.Core.ViewModels.TodoItemViewModels
 {
     public class TodoSwitchItemViewModel : TodoItemViewModelBase
     {
-        private bool _finished;
-        public bool Finished
+        private bool _isSwitched;
+        public bool IsSwitched
         {
-            get { return _finished; }
-            set { SetProperty(ref _finished, value); }
+            get { return _isSwitched; }
+            set { SetProperty(ref _isSwitched, value); }
         }
     }
 }
