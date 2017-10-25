@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApiExamples.Core.ViewModels.Helpers
+namespace TodoTask.Core.ViewModels.Helpers
 {
     public class Repository
     {

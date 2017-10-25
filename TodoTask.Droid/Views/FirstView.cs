@@ -1,6 +1,5 @@
 using Android.App;
 using Android.OS;
-using ApiExamples.Droid;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform.Converters;
 
