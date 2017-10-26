@@ -1,10 +1,12 @@
 using System;
+using Acr.UserDialogs;
 using Android.Content;
 using TodoTask.Core.Interfaces;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using MvvmCross.Platform.Droid.Platform;
 using TodoTask.Droid.Helpers;
 
 namespace TodoTask.Droid
@@ -21,7 +23,13 @@ namespace TodoTask.Droid
             Register();
             return new Core.App();
         }
-		
+
+        protected override void InitializeLastChance()
+        {
+            base.InitializeLastChance();
+            UserDialogs.Init(() => Mvx.Resolve<IMvxAndroidCurrentTopActivity>().Activity);
+        }
+
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();

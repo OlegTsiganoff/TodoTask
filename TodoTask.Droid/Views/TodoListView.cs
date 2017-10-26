@@ -2,6 +2,7 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Views;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Views;
@@ -19,6 +20,13 @@ namespace TodoTask.Droid.Views
             var list = FindViewById<MvxListView>(Resource.Id.listView);
             list.Adapter = new CustomAdapter(this, (IMvxAndroidBindingContext)BindingContext);
             
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            var viewModel = ViewModel as TodoListViewModel;
+            viewModel?.AppearingCommand?.Execute(null);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

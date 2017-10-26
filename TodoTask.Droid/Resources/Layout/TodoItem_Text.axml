@@ -44,6 +44,6 @@
             android:layout_width="60dp"
             android:layout_weight="0"
             android:layout_height="match_parent"
-            local:MvxBind="Checked IsSwitched" />
+            local:MvxBind="Checked Finished" />
     </LinearLayout>
 </LinearLayout>

@@ -36,16 +36,18 @@
 		android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-		<SeekBar
-          android:layout_weight="1"
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:max="100"
-          local:MvxBind="Progress Progress" />        
+		<ProgressBar
+			style="?android:attr/progressBarStyleHorizontal"
+			android:layout_weight="1"
+            android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:indeterminate="false"
+			android:max="100"
+			local:MvxBind="Progress Progress" />		    
         <CheckBox
             android:layout_width="60dp"
             android:layout_weight="0"
             android:layout_height="match_parent"
-			local:MvxBind="Checked IsSwitched" />       
+			local:MvxBind="Checked Finished" />       
       </LinearLayout>
 </LinearLayout>

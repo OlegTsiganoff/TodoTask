@@ -45,6 +45,10 @@
     <Compile Include="Services\AllTestsService.cs" />
     <Compile Include="Helpers\ObservableDictionary.cs" />
     <Compile Include="Helpers\Repository.cs" />
+    <Compile Include="ViewModels\EditViewModels\EditTodoProgressViewModel.cs" />
+    <Compile Include="ViewModels\EditViewModels\EditTodoSwitchViewModel.cs" />
+    <Compile Include="ViewModels\EditViewModels\EditTodoTextViewModel.cs" />
+    <Compile Include="ViewModels\EditViewModels\EditTodoViewModelBase.cs" />
     <Compile Include="ViewModels\TodoItemViewModels\TodoItemViewModelBase.cs" />
     <Compile Include="ViewModels\TodoItemViewModels\TodoProgressItemViewMode.cs" />
     <Compile Include="ViewModels\TodoItemViewModels\TodoSwitchItemViewModel.cs" />
@@ -67,11 +71,11 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.UserDialogs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Acr.UserDialogs.5.0.0\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.dll</HintPath>
+      <HintPath>..\packages\Acr.UserDialogs.6.2.4\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Acr.UserDialogs.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Acr.UserDialogs.5.0.0\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.Interface.dll</HintPath>
+      <HintPath>..\packages\Acr.UserDialogs.6.2.4\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.Interface.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">

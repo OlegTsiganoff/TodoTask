@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:text="Name:"
+                android:layout_weight="0"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="start" />
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                local:MvxBind="Text ViewModel.Name" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Date:"
+                android:layout_weight="0"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="start" />
+            <MvxDatePicker
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                local:MvxBind="Value ViewModel.DateTime" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:text="Switch:"
+                android:layout_weight="0"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="start" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:textOff="Off"
+                android:textOn="On"
+                local:MvxBind="Checked ViewModel.IsSwitched" />
+        </LinearLayout>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Save"
+            local:MvxBind="Click SaveCommand" />
+    </LinearLayout>
+</ScrollView>

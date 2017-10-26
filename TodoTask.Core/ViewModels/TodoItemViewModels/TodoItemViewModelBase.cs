@@ -1,19 +1,22 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
 using TodoTask.Core.Model;
+using TodoTask.Core.ViewModels.Helpers;
 
 namespace TodoTask.Core.ViewModels.TodoItemViewModels
 {
     public abstract class TodoItemViewModelBase : MvxViewModel, IComparable<TodoItemViewModelBase>
     {
+        public  TodoItem Item { get; protected set; }
         protected TodoItemViewModelBase() { }
 
         protected TodoItemViewModelBase(TodoItem item)
         {
+            Item = item;
             Id = item.Id;
             Name = item.Name;
             DateTime = item.DateTime;
-            Finished = item.Finished;
+            _finished = item.Finished;
         }
 
         public int Id { get; set; }
@@ -36,12 +39,23 @@ namespace TodoTask.Core.ViewModels.TodoItemViewModels
         public bool Finished
         {
             get { return _finished; }
-            set { SetProperty(ref _finished, value); }
+            set
+            {
+                SetProperty(ref _finished, value); 
+                Save();
+            }
         }
 
         public int CompareTo(TodoItemViewModelBase other)
         {
             return this.DateTime.CompareTo(other.DateTime);
+        }
+
+        public virtual void Save()
+        {
+            Item.Name = Name;
+            Item.DateTime = DateTime;
+            Item.Finished = Finished;
         }
     }
 }
