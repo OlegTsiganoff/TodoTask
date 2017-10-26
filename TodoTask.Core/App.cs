@@ -1,3 +1,5 @@
+using Acr.UserDialogs;
+using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using TodoTask.Core.Helpers.Database;
 
@@ -14,6 +16,7 @@ namespace TodoTask.Core
             var dbCreator = new DBCreator();
             dbCreator.FillDatabaseIfNeed();
             RegisterAppStart<ViewModels.TodoListViewModel>();
+            Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
         }
     }
 }

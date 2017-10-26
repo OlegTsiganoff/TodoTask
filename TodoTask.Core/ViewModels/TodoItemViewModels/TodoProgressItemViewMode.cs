@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TodoTask.Core.ViewModels.TodoItemViewModels;
+﻿using TodoTask.Core.Model;
 
 namespace TodoTask.Core.ViewModels.TodoItemViewModels
 {
@@ -12,11 +7,23 @@ namespace TodoTask.Core.ViewModels.TodoItemViewModels
         private const int MinValue = 0;
         private const int MaxValue = 100;
 
+        public TodoProgressItemViewMode() { }
+        public TodoProgressItemViewMode(TodoProgressItem item) : base(item)
+        {
+            Progress = item.Progress;
+        }
+
         private int _progress;
         public int Progress
         {
             get { return _progress; }
-            set { SetProperty(ref _progress, value); }
+            set
+            {
+                int val = value;
+                if (val < MinValue) val = MinValue;
+                if (val > MaxValue) val = MaxValue;
+                SetProperty(ref _progress, val); 
+            }
         }
     }
 }

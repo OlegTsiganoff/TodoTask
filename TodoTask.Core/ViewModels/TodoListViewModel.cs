@@ -4,7 +4,10 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using TodoTask.Core.Model;
 using TodoTask.Core.ViewModels.Helpers;
 using TodoTask.Core.ViewModels.TodoItemViewModels;
 
@@ -20,13 +23,32 @@ namespace TodoTask.Core.ViewModels
             set { SetProperty(ref _items, value); }
         }
 
+        private IMvxCommand _addCommand;
+        public IMvxCommand AddCommand
+        {
+            get { return _addCommand; }
+            set { SetProperty(ref _addCommand, value); }
+        }
+
+
         public TodoListViewModel()
         {
             AppearingCommand = new MvxCommand(AppearingExecute);
             DisappearingCommand = new MvxCommand(DisappearingExecute);
             BackCommand = new MvxCommand(BackExecute);
+            AddCommand = new MvxCommand(AddCommandExecute);
             _repository = new Repository();
             FillListItems();
+        }
+
+        private void AddCommandExecute()
+        {
+            var dialog = Mvx.Resolve<IUserDialogs>();
+            var config = new ActionSheetConfig {Cancel = new ActionSheetOption("Cancel")};
+            config.Add("Text", () => { });
+            config.Add("Switch", () => { });
+            config.Add("Progress", () => { });
+            dialog.ActionSheet(config);
         }
 
         private async void AppearingExecute()
@@ -52,18 +74,14 @@ namespace TodoTask.Core.ViewModels
             {
                 try
                 {
-                    var list = _repository.GetPreviousWeekTextItems(DateTime.Now);
-                    list = list.Concat(_repository.GetNextWeekTextItems(DateTime.Now)).ToList();
-                    Items = new ObservableCollection<TodoItemViewModelBase>(list
-                        .Select(x => new TodoTextItemViewModel()
-                        {
-                            Id = x.Id,
-                            DateTime = x.DateTime,
-                            Name = x.Name,
-                            Text = x.Text
-                        })
-                        .ToList());
-
+                    var startDate = DateTime.Now.AddDays(-7);
+                    var endDate = DateTime.Now.AddDays(7);
+                    List<TodoItemViewModelBase> list = new List<TodoItemViewModelBase>();
+                    list.AddRange(_repository.GetNextWeekItems<TodoTextItem>(startDate, endDate).Select(x => new TodoTextItemViewModel(x)));
+                    list.AddRange(_repository.GetNextWeekItems<TodoProgressItem>(startDate, endDate).Select(x => new TodoProgressItemViewMode(x)));
+                    list.AddRange(_repository.GetNextWeekItems<TodoSwitchItem>(startDate, endDate).Select(x => new TodoSwitchItemViewModel(x)));
+                    list.Sort();
+                    Items = new ObservableCollection<TodoItemViewModelBase>(list);
                 }
                 catch (Exception e)
                 {
@@ -72,5 +90,7 @@ namespace TodoTask.Core.ViewModels
             });
 
         }
+
+       
     }
 }

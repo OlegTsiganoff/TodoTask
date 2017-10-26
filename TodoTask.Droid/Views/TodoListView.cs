@@ -1,5 +1,6 @@
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Views;
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Binding.Droid.Views;
@@ -9,7 +10,7 @@ using TodoTask.Core.ViewModels.TodoItemViewModels;
 
 namespace TodoTask.Droid.Views
 {
-    [Activity]
+    [Activity(ScreenOrientation = ScreenOrientation.Sensor)]
     public class TodoListView : MvxActivity
     {
         protected override void OnViewModelSet()
@@ -17,6 +18,20 @@ namespace TodoTask.Droid.Views
             SetContentView(Resource.Layout.TodoListView);
             var list = FindViewById<MvxListView>(Resource.Id.listView);
             list.Adapter = new CustomAdapter(this, (IMvxAndroidBindingContext)BindingContext);
+            
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            menu.Add("Add");
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            var viewModel = ViewModel as TodoListViewModel;
+            viewModel?.AddCommand?.Execute(null);
+            return base.OnOptionsItemSelected(item);
         }
 
         public class CustomAdapter : MvxAdapter

@@ -26,6 +26,43 @@ namespace TodoTask.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::AndroidHUD.Resource.Attribute.ahBarColor = global::TodoTask.Droid.Resource.Attribute.ahBarColor;
+			global::AndroidHUD.Resource.Attribute.ahBarLength = global::TodoTask.Droid.Resource.Attribute.ahBarLength;
+			global::AndroidHUD.Resource.Attribute.ahBarWidth = global::TodoTask.Droid.Resource.Attribute.ahBarWidth;
+			global::AndroidHUD.Resource.Attribute.ahCircleColor = global::TodoTask.Droid.Resource.Attribute.ahCircleColor;
+			global::AndroidHUD.Resource.Attribute.ahDelayMillis = global::TodoTask.Droid.Resource.Attribute.ahDelayMillis;
+			global::AndroidHUD.Resource.Attribute.ahRadius = global::TodoTask.Droid.Resource.Attribute.ahRadius;
+			global::AndroidHUD.Resource.Attribute.ahRimColor = global::TodoTask.Droid.Resource.Attribute.ahRimColor;
+			global::AndroidHUD.Resource.Attribute.ahRimWidth = global::TodoTask.Droid.Resource.Attribute.ahRimWidth;
+			global::AndroidHUD.Resource.Attribute.ahSpinSpeed = global::TodoTask.Droid.Resource.Attribute.ahSpinSpeed;
+			global::AndroidHUD.Resource.Attribute.ahText = global::TodoTask.Droid.Resource.Attribute.ahText;
+			global::AndroidHUD.Resource.Attribute.ahTextColor = global::TodoTask.Droid.Resource.Attribute.ahTextColor;
+			global::AndroidHUD.Resource.Attribute.ahTextSize = global::TodoTask.Droid.Resource.Attribute.ahTextSize;
+			global::AndroidHUD.Resource.Drawable.ic_errorstatus = global::TodoTask.Droid.Resource.Drawable.ic_errorstatus;
+			global::AndroidHUD.Resource.Drawable.ic_successstatus = global::TodoTask.Droid.Resource.Drawable.ic_successstatus;
+			global::AndroidHUD.Resource.Drawable.roundedbg = global::TodoTask.Droid.Resource.Drawable.roundedbg;
+			global::AndroidHUD.Resource.Drawable.roundedbgdark = global::TodoTask.Droid.Resource.Drawable.roundedbgdark;
+			global::AndroidHUD.Resource.Id.loadingImage = global::TodoTask.Droid.Resource.Id.loadingImage;
+			global::AndroidHUD.Resource.Id.loadingProgressBar = global::TodoTask.Droid.Resource.Id.loadingProgressBar;
+			global::AndroidHUD.Resource.Id.loadingProgressWheel = global::TodoTask.Droid.Resource.Id.loadingProgressWheel;
+			global::AndroidHUD.Resource.Id.textViewStatus = global::TodoTask.Droid.Resource.Id.textViewStatus;
+			global::AndroidHUD.Resource.Layout.loading = global::TodoTask.Droid.Resource.Layout.loading;
+			global::AndroidHUD.Resource.Layout.loadingimage = global::TodoTask.Droid.Resource.Layout.loadingimage;
+			global::AndroidHUD.Resource.Layout.loadingprogress = global::TodoTask.Droid.Resource.Layout.loadingprogress;
+			global::AndroidHUD.Resource.String.library_name = global::TodoTask.Droid.Resource.String.library_name;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel = global::TodoTask.Droid.Resource.Styleable.ProgressWheel;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarColor = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahBarColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarLength = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahBarLength;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarWidth = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahBarWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahCircleColor = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahCircleColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahDelayMillis = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahDelayMillis;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRadius = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahRadius;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRimColor = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahRimColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRimWidth = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahRimWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahSpinSpeed = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahSpinSpeed;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahText;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::TodoTask.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::TodoTask.Droid.Resource.Attribute.MvxBind;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::TodoTask.Droid.Resource.Attribute.MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::TodoTask.Droid.Resource.Attribute.MvxGroupItemTemplate;
@@ -47,6 +84,7 @@ namespace TodoTask.Droid
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::TodoTask.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TodoTask.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::TodoTask.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::Splat.Resource.String.library_name = global::TodoTask.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -73,6 +111,42 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f010002
 			public const int MvxTemplate = 2130771970;
 			
+			// aapt resource value: 0x7f01000a
+			public const int ahBarColor = 2130771978;
+			
+			// aapt resource value: 0x7f010012
+			public const int ahBarLength = 2130771986;
+			
+			// aapt resource value: 0x7f010011
+			public const int ahBarWidth = 2130771985;
+			
+			// aapt resource value: 0x7f01000f
+			public const int ahCircleColor = 2130771983;
+			
+			// aapt resource value: 0x7f01000e
+			public const int ahDelayMillis = 2130771982;
+			
+			// aapt resource value: 0x7f010010
+			public const int ahRadius = 2130771984;
+			
+			// aapt resource value: 0x7f01000b
+			public const int ahRimColor = 2130771979;
+			
+			// aapt resource value: 0x7f01000c
+			public const int ahRimWidth = 2130771980;
+			
+			// aapt resource value: 0x7f01000d
+			public const int ahSpinSpeed = 2130771981;
+			
+			// aapt resource value: 0x7f010007
+			public const int ahText = 2130771975;
+			
+			// aapt resource value: 0x7f010008
+			public const int ahTextColor = 2130771976;
+			
+			// aapt resource value: 0x7f010009
+			public const int ahTextSize = 2130771977;
+			
 			static Attribute()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -87,10 +161,22 @@ namespace TodoTask.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ic_errorstatus = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int splash = 2130837505;
+			public const int ic_successstatus = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Icon = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int roundedbg = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int roundedbgdark = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int splash = 2130837509;
 			
 			static Drawable()
 			{
@@ -105,17 +191,29 @@ namespace TodoTask.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MvvmCrossTagId = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int MvvmCrossTagId = 2131099648;
 			
-			// aapt resource value: 0x7f050001
-			public const int MvxBindingTagUnique = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int MvxBindingTagUnique = 2131099649;
 			
-			// aapt resource value: 0x7f050002
-			public const int MyButton = 2131034114;
+			// aapt resource value: 0x7f060006
+			public const int MyButton = 2131099654;
 			
-			// aapt resource value: 0x7f050003
-			public const int listView = 2131034115;
+			// aapt resource value: 0x7f060007
+			public const int listView = 2131099655;
+			
+			// aapt resource value: 0x7f060004
+			public const int loadingImage = 2131099652;
+			
+			// aapt resource value: 0x7f060002
+			public const int loadingProgressBar = 2131099650;
+			
+			// aapt resource value: 0x7f060005
+			public const int loadingProgressWheel = 2131099653;
+			
+			// aapt resource value: 0x7f060003
+			public const int textViewStatus = 2131099651;
 			
 			static Id()
 			{
@@ -149,82 +247,91 @@ namespace TodoTask.Droid
 			public const int Item_Test = 2130968581;
 			
 			// aapt resource value: 0x7f040006
-			public const int Main = 2130968582;
+			public const int loading = 2130968582;
 			
 			// aapt resource value: 0x7f040007
-			public const int SplashScreen = 2130968583;
+			public const int loadingimage = 2130968583;
 			
 			// aapt resource value: 0x7f040008
-			public const int SubTest_If = 2130968584;
+			public const int loadingprogress = 2130968584;
 			
 			// aapt resource value: 0x7f040009
-			public const int Test_Command = 2130968585;
+			public const int Main = 2130968585;
 			
 			// aapt resource value: 0x7f04000a
-			public const int Test_ContainsSub = 2130968586;
+			public const int SplashScreen = 2130968586;
 			
 			// aapt resource value: 0x7f04000b
-			public const int Test_ConvertThis = 2130968587;
+			public const int SubTest_If = 2130968587;
 			
 			// aapt resource value: 0x7f04000c
-			public const int Test_Date = 2130968588;
+			public const int Test_Command = 2130968588;
 			
 			// aapt resource value: 0x7f04000d
-			public const int Test_Frame = 2130968589;
+			public const int Test_ContainsSub = 2130968589;
 			
 			// aapt resource value: 0x7f04000e
-			public const int Test_If = 2130968590;
+			public const int Test_ConvertThis = 2130968590;
 			
 			// aapt resource value: 0x7f04000f
-			public const int Test_LinearLayout = 2130968591;
+			public const int Test_Date = 2130968591;
 			
 			// aapt resource value: 0x7f040010
-			public const int Test_List = 2130968592;
+			public const int Test_Frame = 2130968592;
 			
 			// aapt resource value: 0x7f040011
-			public const int Test_Maths = 2130968593;
+			public const int Test_If = 2130968593;
 			
 			// aapt resource value: 0x7f040012
-			public const int Test_ObservableCollection = 2130968594;
+			public const int Test_LinearLayout = 2130968594;
 			
 			// aapt resource value: 0x7f040013
-			public const int Test_ObservableDictionary = 2130968595;
+			public const int Test_List = 2130968595;
 			
 			// aapt resource value: 0x7f040014
-			public const int Test_RadioGroup = 2130968596;
+			public const int Test_Maths = 2130968596;
 			
 			// aapt resource value: 0x7f040015
-			public const int Test_RatingBar = 2130968597;
+			public const int Test_ObservableCollection = 2130968597;
 			
 			// aapt resource value: 0x7f040016
-			public const int Test_Relative = 2130968598;
+			public const int Test_ObservableDictionary = 2130968598;
 			
 			// aapt resource value: 0x7f040017
-			public const int Test_Seek = 2130968599;
+			public const int Test_RadioGroup = 2130968599;
 			
 			// aapt resource value: 0x7f040018
-			public const int Test_Spinner = 2130968600;
+			public const int Test_RatingBar = 2130968600;
 			
 			// aapt resource value: 0x7f040019
-			public const int Test_Text = 2130968601;
+			public const int Test_Relative = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int Test_Time = 2130968602;
+			public const int Test_Seek = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int Test_WithErrors = 2130968603;
+			public const int Test_Spinner = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int TodoItem_Progress = 2130968604;
+			public const int Test_Text = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int TodoItem_Switch = 2130968605;
+			public const int Test_Time = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int TodoItem_Text = 2130968606;
+			public const int Test_WithErrors = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int TodoListView = 2130968607;
+			public const int TodoItem_Progress = 2130968607;
+			
+			// aapt resource value: 0x7f040020
+			public const int TodoItem_Switch = 2130968608;
+			
+			// aapt resource value: 0x7f040021
+			public const int TodoItem_Text = 2130968609;
+			
+			// aapt resource value: 0x7f040022
+			public const int TodoListView = 2130968610;
 			
 			static Layout()
 			{
@@ -255,11 +362,14 @@ namespace TodoTask.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070001
-			public const int ApplicationName = 2131165185;
+			// aapt resource value: 0x7f050002
+			public const int ApplicationName = 2131034114;
 			
-			// aapt resource value: 0x7f070000
-			public const int Hello = 2131165184;
+			// aapt resource value: 0x7f050001
+			public const int Hello = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int library_name = 2131034112;
 			
 			static String()
 			{
@@ -274,8 +384,8 @@ namespace TodoTask.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int Theme_Splash = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int Theme_Splash = 2131165184;
 			
 			static Style()
 			{
@@ -327,6 +437,56 @@ namespace TodoTask.Droid
 			
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
+			
+			public static int[] ProgressWheel = new int[] {
+					2130771975,
+					2130771976,
+					2130771977,
+					2130771978,
+					2130771979,
+					2130771980,
+					2130771981,
+					2130771982,
+					2130771983,
+					2130771984,
+					2130771985,
+					2130771986};
+			
+			// aapt resource value: 3
+			public const int ProgressWheel_ahBarColor = 3;
+			
+			// aapt resource value: 11
+			public const int ProgressWheel_ahBarLength = 11;
+			
+			// aapt resource value: 10
+			public const int ProgressWheel_ahBarWidth = 10;
+			
+			// aapt resource value: 8
+			public const int ProgressWheel_ahCircleColor = 8;
+			
+			// aapt resource value: 7
+			public const int ProgressWheel_ahDelayMillis = 7;
+			
+			// aapt resource value: 9
+			public const int ProgressWheel_ahRadius = 9;
+			
+			// aapt resource value: 4
+			public const int ProgressWheel_ahRimColor = 4;
+			
+			// aapt resource value: 5
+			public const int ProgressWheel_ahRimWidth = 5;
+			
+			// aapt resource value: 6
+			public const int ProgressWheel_ahSpinSpeed = 6;
+			
+			// aapt resource value: 0
+			public const int ProgressWheel_ahText = 0;
+			
+			// aapt resource value: 1
+			public const int ProgressWheel_ahTextColor = 1;
+			
+			// aapt resource value: 2
+			public const int ProgressWheel_ahTextSize = 2;
 			
 			static Styleable()
 			{
