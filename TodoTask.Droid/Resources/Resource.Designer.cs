@@ -1957,10 +1957,7 @@ namespace TodoTask.Droid
 			public const int MvxBindingTagUnique = 2131165196;
 			
 			// aapt resource value: 0x7f070078
-			public const int MyButton = 2131165304;
-			
-			// aapt resource value: 0x7f070079
-			public const int action0 = 2131165305;
+			public const int action0 = 2131165304;
 			
 			// aapt resource value: 0x7f07005c
 			public const int action_bar = 2131165276;
@@ -1986,8 +1983,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f07005d
 			public const int action_context_bar = 2131165277;
 			
-			// aapt resource value: 0x7f07007d
-			public const int action_divider = 2131165309;
+			// aapt resource value: 0x7f07007c
+			public const int action_divider = 2131165308;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -2022,8 +2019,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f070046
 			public const int buttonPanel = 2131165254;
 			
-			// aapt resource value: 0x7f07007a
-			public const int cancel_action = 2131165306;
+			// aapt resource value: 0x7f070079
+			public const int cancel_action = 2131165305;
 			
 			// aapt resource value: 0x7f07002d
 			public const int center = 2131165229;
@@ -2037,8 +2034,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f070054
 			public const int checkbox = 2131165268;
 			
-			// aapt resource value: 0x7f070080
-			public const int chronometer = 2131165312;
+			// aapt resource value: 0x7f07007f
+			public const int chronometer = 2131165311;
 			
 			// aapt resource value: 0x7f070035
 			public const int clip_horizontal = 2131165237;
@@ -2088,8 +2085,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f07001e
 			public const int end = 2131165214;
 			
-			// aapt resource value: 0x7f070085
-			public const int end_padder = 2131165317;
+			// aapt resource value: 0x7f070084
+			public const int end_padder = 2131165316;
 			
 			// aapt resource value: 0x7f070025
 			public const int enterAlways = 2131165221;
@@ -2133,8 +2130,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f070041
 			public const int image = 2131165249;
 			
-			// aapt resource value: 0x7f070084
-			public const int info = 2131165316;
+			// aapt resource value: 0x7f070083
+			public const int info = 2131165315;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -2142,17 +2139,17 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f070031
 			public const int left = 2131165233;
 			
-			// aapt resource value: 0x7f07007e
-			public const int line1 = 2131165310;
+			// aapt resource value: 0x7f07007d
+			public const int line1 = 2131165309;
 			
-			// aapt resource value: 0x7f070082
-			public const int line3 = 2131165314;
+			// aapt resource value: 0x7f070081
+			public const int line3 = 2131165313;
 			
 			// aapt resource value: 0x7f07000d
 			public const int listMode = 2131165197;
 			
-			// aapt resource value: 0x7f070086
-			public const int listView = 2131165318;
+			// aapt resource value: 0x7f070085
+			public const int listView = 2131165317;
 			
 			// aapt resource value: 0x7f070043
 			public const int list_item = 2131165251;
@@ -2166,8 +2163,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f070077
 			public const int loadingProgressWheel = 2131165303;
 			
-			// aapt resource value: 0x7f07007c
-			public const int media_actions = 2131165308;
+			// aapt resource value: 0x7f07007b
+			public const int media_actions = 2131165307;
 			
 			// aapt resource value: 0x7f07001f
 			public const int middle = 2131165215;
@@ -2301,8 +2298,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f070033
 			public const int start = 2131165235;
 			
-			// aapt resource value: 0x7f07007b
-			public const int status_bar_latest_event_content = 2131165307;
+			// aapt resource value: 0x7f07007a
+			public const int status_bar_latest_event_content = 2131165306;
 			
 			// aapt resource value: 0x7f070067
 			public const int submit_area = 2131165287;
@@ -2310,11 +2307,11 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f07000f
 			public const int tabMode = 2131165199;
 			
-			// aapt resource value: 0x7f070083
-			public const int text = 2131165315;
+			// aapt resource value: 0x7f070082
+			public const int text = 2131165314;
 			
-			// aapt resource value: 0x7f070081
-			public const int text2 = 2131165313;
+			// aapt resource value: 0x7f070080
+			public const int text2 = 2131165312;
 			
 			// aapt resource value: 0x7f07004f
 			public const int textSpacerNoButtons = 2131165263;
@@ -2322,8 +2319,8 @@ namespace TodoTask.Droid
 			// aapt resource value: 0x7f070075
 			public const int textViewStatus = 2131165301;
 			
-			// aapt resource value: 0x7f07007f
-			public const int time = 2131165311;
+			// aapt resource value: 0x7f07007e
+			public const int time = 2131165310;
 			
 			// aapt resource value: 0x7f070045
 			public const int title = 2131165253;
@@ -2514,154 +2511,73 @@ namespace TodoTask.Droid
 			public const int design_navigation_menu_item = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int FirstView = 2130968613;
+			public const int loading = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int Item_Person = 2130968614;
+			public const int loadingimage = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int Item_Radio = 2130968615;
+			public const int loadingprogress = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int Item_Spinner = 2130968616;
+			public const int notification_media_action = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int Item_SpinnerDropDown = 2130968617;
+			public const int notification_media_cancel_action = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int Item_Test = 2130968618;
+			public const int notification_template_big_media = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int loading = 2130968619;
+			public const int notification_template_big_media_narrow = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int loadingimage = 2130968620;
+			public const int notification_template_lines = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int loadingprogress = 2130968621;
+			public const int notification_template_media = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int Main = 2130968622;
+			public const int notification_template_part_chronometer = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_media_action = 2130968623;
+			public const int notification_template_part_time = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_cancel_action = 2130968624;
+			public const int select_dialog_item_material = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media = 2130968625;
+			public const int select_dialog_multichoice_material = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media_narrow = 2130968626;
+			public const int select_dialog_singlechoice_material = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_lines = 2130968627;
+			public const int SplashScreen = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_media = 2130968628;
+			public const int support_simple_spinner_dropdown_item = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_part_chronometer = 2130968629;
+			public const int TodoItem_Progress = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_part_time = 2130968630;
+			public const int TodoItem_Switch = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int select_dialog_item_material = 2130968631;
+			public const int TodoItem_Text = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int select_dialog_multichoice_material = 2130968632;
+			public const int TodoListView = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int select_dialog_singlechoice_material = 2130968633;
+			public const int TodoProgressEditView = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int SplashScreen = 2130968634;
+			public const int TodoSwitchEditView = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int SubTest_If = 2130968635;
-			
-			// aapt resource value: 0x7f04003c
-			public const int support_simple_spinner_dropdown_item = 2130968636;
-			
-			// aapt resource value: 0x7f04003d
-			public const int Test_Command = 2130968637;
-			
-			// aapt resource value: 0x7f04003e
-			public const int Test_ContainsSub = 2130968638;
-			
-			// aapt resource value: 0x7f04003f
-			public const int Test_ConvertThis = 2130968639;
-			
-			// aapt resource value: 0x7f040040
-			public const int Test_Date = 2130968640;
-			
-			// aapt resource value: 0x7f040041
-			public const int Test_Frame = 2130968641;
-			
-			// aapt resource value: 0x7f040042
-			public const int Test_If = 2130968642;
-			
-			// aapt resource value: 0x7f040043
-			public const int Test_LinearLayout = 2130968643;
-			
-			// aapt resource value: 0x7f040044
-			public const int Test_List = 2130968644;
-			
-			// aapt resource value: 0x7f040045
-			public const int Test_Maths = 2130968645;
-			
-			// aapt resource value: 0x7f040046
-			public const int Test_ObservableCollection = 2130968646;
-			
-			// aapt resource value: 0x7f040047
-			public const int Test_ObservableDictionary = 2130968647;
-			
-			// aapt resource value: 0x7f040048
-			public const int Test_RadioGroup = 2130968648;
-			
-			// aapt resource value: 0x7f040049
-			public const int Test_RatingBar = 2130968649;
-			
-			// aapt resource value: 0x7f04004a
-			public const int Test_Relative = 2130968650;
-			
-			// aapt resource value: 0x7f04004b
-			public const int Test_Seek = 2130968651;
-			
-			// aapt resource value: 0x7f04004c
-			public const int Test_Spinner = 2130968652;
-			
-			// aapt resource value: 0x7f04004d
-			public const int Test_Text = 2130968653;
-			
-			// aapt resource value: 0x7f04004e
-			public const int Test_Time = 2130968654;
-			
-			// aapt resource value: 0x7f04004f
-			public const int Test_WithErrors = 2130968655;
-			
-			// aapt resource value: 0x7f040050
-			public const int TodoItem_Progress = 2130968656;
-			
-			// aapt resource value: 0x7f040051
-			public const int TodoItem_Switch = 2130968657;
-			
-			// aapt resource value: 0x7f040052
-			public const int TodoItem_Text = 2130968658;
-			
-			// aapt resource value: 0x7f040053
-			public const int TodoListView = 2130968659;
-			
-			// aapt resource value: 0x7f040054
-			public const int TodoProgressEditView = 2130968660;
-			
-			// aapt resource value: 0x7f040055
-			public const int TodoSwitchEditView = 2130968661;
-			
-			// aapt resource value: 0x7f040056
-			public const int TodoTextEditView = 2130968662;
+			public const int TodoTextEditView = 2130968635;
 			
 			static Layout()
 			{
@@ -2692,11 +2608,8 @@ namespace TodoTask.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f080019
-			public const int ApplicationName = 2131230745;
-			
 			// aapt resource value: 0x7f080018
-			public const int Hello = 2131230744;
+			public const int ApplicationName = 2131230744;
 			
 			// aapt resource value: 0x7f080000
 			public const int abc_action_bar_home_description = 2131230720;

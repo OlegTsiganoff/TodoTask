@@ -175,72 +175,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebugTrace.cs" />
     <Compile Include="Helpers\SQLite_Droid.cs" />
-    <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\EditTodoProgressView.cs" />
     <Compile Include="Views\EditTodoSwitchView.cs" />
-    <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\TodoListView.cs" />
     <Compile Include="Views\EditTodoTextView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\Layout\FirstView.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Item_Radio.axml" />
-    <AndroidResource Include="Resources\Layout\Test_RadioGroup.axml" />
-    <AndroidResource Include="Resources\Layout\Test_Time.axml" />
-    <AndroidResource Include="Resources\Layout\Item_Test.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_Date.axml" />
-    <AndroidResource Include="Resources\Layout\Test_Spinner.axml" />
-    <AndroidResource Include="Resources\Layout\Test_LinearLayout.axml" />
-    <AndroidResource Include="Resources\Layout\Test_List.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_Relative.axml" />
-    <AndroidResource Include="Resources\Layout\Test_Frame.axml" />
-    <AndroidResource Include="Resources\Layout\Test_Text.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_Seek.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_ContainsSub.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Item_Person.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_ConvertThis.axml" />
-    <AndroidResource Include="Resources\Layout\Test_ObservableCollection.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_ObservableDictionary.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_WithErrors.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Test_If.axml" />
-    <AndroidResource Include="Resources\Layout\Test_Maths.axml" />
     <AndroidResource Include="Resources\Layout\SplashScreen.axml" />
-    <AndroidResource Include="Resources\Layout\Item_SpinnerDropDown.axml" />
-    <AndroidResource Include="Resources\Layout\Item_Spinner.axml" />
-    <AndroidResource Include="Resources\Layout\SubTest_If.axml" />
-    <AndroidResource Include="Resources\Layout\Test_RatingBar.axml" />
-    <AndroidResource Include="Resources\Layout\Test_Command.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\Layout\TodoListView.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
@@ -258,9 +206,6 @@
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\TodoSwitchEditView.axml" />
     <AndroidResource Include="Resources\Layout\TodoProgressEditView.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\Main.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -283,6 +228,9 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_add_white_24dp.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_add_white_24dp.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_add_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

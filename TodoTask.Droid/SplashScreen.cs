@@ -10,7 +10,7 @@ namespace TodoTask.Droid
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"
 		, NoHistory = true
-		, ScreenOrientation = ScreenOrientation.Portrait)]
+		, ScreenOrientation = ScreenOrientation.Sensor)]
     public class SplashScreen : MvxSplashScreenActivity
     {
         public SplashScreen()
