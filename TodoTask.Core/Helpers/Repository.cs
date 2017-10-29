@@ -9,7 +9,7 @@ namespace TodoTask.Core.ViewModels.Helpers
 {
     public class Repository
     {
-        public IList<T> GetNextWeekItems<T>(DateTime startDateTime, DateTime endDateTime) where T : TodoItem, new ()
+        public IList<T> GetItemsForDatePeriod<T>(DateTime startDateTime, DateTime endDateTime) where T : TodoItem, new ()
         {
             var connection = Mvx.Resolve<ISQLite>().GetConnection();
             var items = connection.Table<T>().Where(x => x.DateTime > startDateTime && x.DateTime < endDateTime);

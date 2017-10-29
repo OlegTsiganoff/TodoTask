@@ -1,11 +1,16 @@
+using System.Diagnostics;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Support.V7.Widget;
 using Android.Views;
-using MvvmCross.Binding.BindingContext;
+using Android.Widget;
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Views;
+using MvvmCross.Platform;
+using MvvmCross.Plugins.Messenger;
+using TodoTask.Core.Events;
 using TodoTask.Core.ViewModels;
 using TodoTask.Core.ViewModels.TodoItemViewModels;
 
@@ -19,7 +24,7 @@ namespace TodoTask.Droid.Views
             SetContentView(Resource.Layout.TodoListView);
             var list = FindViewById<MvxListView>(Resource.Id.listView);
             list.Adapter = new CustomAdapter(this, (IMvxAndroidBindingContext)BindingContext);
-            
+            list.SetOnScrollListener(new CustomScrollListener());
         }
 
         protected override void OnResume()
@@ -59,12 +64,14 @@ namespace TodoTask.Droid.Views
                 return 2;
             }
 
+
+
             public override int ViewTypeCount
             {
                 get { return 3; }
             }
 
-            protected override View GetBindableView(View convertView, object dataContext, int templateId)
+            protected override View GetBindableView(View convertView, object dataContext, ViewGroup parent, int templateId)
             {
                 if(dataContext is TodoTextItemViewModel)
                     templateId = Resource.Layout.TodoItem_Text;
@@ -74,8 +81,30 @@ namespace TodoTask.Droid.Views
                 {
                     templateId = Resource.Layout.TodoItem_Switch;
                 }
+                return base.GetBindableView(convertView, dataContext, parent, templateId);
+            }
+        }
 
-                return base.GetBindableView(convertView, dataContext, templateId);
+        public class CustomScrollListener : Java.Lang.Object,  AbsListView.IOnScrollListener
+        {
+            public void OnScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount)
+            {
+                var messanger = Mvx.Resolve<IMvxMessenger>();
+                messanger.Publish(new OnScrollListViewEvent(this) {FirstVisibleItem = firstVisibleItem, VisibleItemCount = visibleItemCount, TotalItemCount = totalItemCount});
+                Debug.WriteLine("OnScroll firstVisibleItem = {0}, visibleItemCount = {1}, totalItemCount = {2}", firstVisibleItem, visibleItemCount, totalItemCount);
+            }
+
+            public void OnScrollStateChanged(AbsListView view, ScrollState scrollState)
+            {
+                Debug.WriteLine("OnScrollStateChanged scrollState = {0}", scrollState);
+            }
+        }
+
+        public class CustomScrolChangedlListener : Java.Lang.Object, AbsListView.IOnScrollChangeListener
+        {
+            public void OnScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY)
+            {
+                //Debug.WriteLine("OnScrollChange scrollState = {0}", scrollState);
             }
         }
     }
