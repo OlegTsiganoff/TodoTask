@@ -15,7 +15,7 @@ namespace TodoTask.Core
                 .RegisterAsLazySingleton();
             var dbCreator = new DBCreator();
             dbCreator.FillDatabaseIfNeed();
-            RegisterAppStart<ViewModels.TodoListViewModel>();
+            RegisterNavigationServiceAppStart<ViewModels.TodoListViewModel>();
             Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
         }
     }

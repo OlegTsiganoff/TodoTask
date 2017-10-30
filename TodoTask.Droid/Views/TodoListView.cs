@@ -2,7 +2,6 @@ using System.Diagnostics;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.Droid.BindingContext;
@@ -16,12 +15,13 @@ using TodoTask.Core.ViewModels.TodoItemViewModels;
 
 namespace TodoTask.Droid.Views
 {
-    [Activity(ScreenOrientation = ScreenOrientation.Sensor)]
+    [Activity(ScreenOrientation = ScreenOrientation.Sensor, Theme = "@style/AppTheme")]
     public class TodoListView : MvxActivity
     {
         protected override void OnViewModelSet()
         {
-            SetContentView(Resource.Layout.TodoListView);
+            var view = this.BindingInflate(Resource.Layout.TodoRecyclerView, null);
+            SetContentView(Resource.Layout.TodoRecyclerView);
             var list = FindViewById<MvxListView>(Resource.Id.listView);
             list.Adapter = new CustomAdapter(this, (IMvxAndroidBindingContext)BindingContext);
             list.SetOnScrollListener(new CustomScrollListener());
