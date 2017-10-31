@@ -9,6 +9,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.Messenger;
 using TodoTask.Core.Events;
+using TodoTask.Core.Extentions;
 using TodoTask.Core.Model;
 using TodoTask.Core.ViewModels.EditViewModels;
 using TodoTask.Core.ViewModels.Helpers;
@@ -23,14 +24,14 @@ namespace TodoTask.Core.ViewModels
         private DateTime _endDate;
         private readonly MvxSubscriptionToken _token;
 
-        private ObservableCollection<TodoItemViewModelBase> _items;
-        public ObservableCollection<TodoItemViewModelBase> Items
+        private MvxObservableCollection<TodoItemViewModelBase> _items;
+        public MvxObservableCollection<TodoItemViewModelBase> Items
         {
             get { return _items; }
             set { SetProperty(ref _items, value); }
         }
 
-        public bool _isRefreshing;
+        private bool _isRefreshing;
         public bool IsRefreshing
         {
             get { return _isRefreshing; }
@@ -58,9 +59,6 @@ namespace TodoTask.Core.ViewModels
         {
             var messanger = Mvx.Resolve<IMvxMessenger>();
             _token = messanger.Subscribe<OnScrollListViewEvent>(OnScrollListViewEventDeliveryAction);
-            AppearingCommand = new MvxCommand(AppearingExecute);
-            DisappearingCommand = new MvxCommand(DisappearingExecute);
-            BackCommand = new MvxCommand(BackExecute);
             AddCommand = new MvxCommand(AddCommandExecute);
             GetPreviousCommand = new MvxAsyncCommand(GetPreviousExecute);
             NavigateToDetailCommand = new MvxCommand<TodoItemViewModelBase>(item =>
@@ -69,6 +67,7 @@ namespace TodoTask.Core.ViewModels
                     ShowViewModel<EditTodoTextViewModel>(item);
             });
             _repository = new Repository();
+            Items = new MvxObservableCollection<TodoItemViewModelBase>();
             
         }
 
@@ -118,22 +117,15 @@ namespace TodoTask.Core.ViewModels
             dialog.ActionSheet(config);
         }
 
-        private async void AppearingExecute()
+        public override async void ViewAppearing()
         {
+            base.ViewAppearing();
             await Task.Run(() =>
             {
                 FillListItems();
             });
         }
-
-        private void DisappearingExecute()
-        {
-
-        }
-
-        private void BackExecute()
-        {
-        }
+       
 
         void FillListItems()
         {
@@ -142,7 +134,7 @@ namespace TodoTask.Core.ViewModels
                 _startDate = DateTime.Now.AddDays(-7);
                 _endDate = DateTime.Now.AddDays(7);
                 var list = GetSortedItemList(_startDate, _endDate);
-                Items = new ObservableCollection<TodoItemViewModelBase>(list);
+               AddItemsToTheEnd(list);
             }
             catch (Exception e)
             {
@@ -166,21 +158,32 @@ namespace TodoTask.Core.ViewModels
         private void AddItemsToTheBeginning(IList<TodoItemViewModelBase> items)
         {
             if(items == null) return;
-            
+            var list = Items.ToList();
             for (int i = items.Count - 1; i >= 0; i--)
             {
-                Items.Insert(0, items[i]);
+                list.Insert(0, items[i]);
             }
+            Items = new MvxObservableCollection<TodoItemViewModelBase>(list);
         }
 
         private void AddItemsToTheEnd(IList<TodoItemViewModelBase> items)
         {
             if(items == null) return;
-            
-            foreach (var item in items)
+            var list = Items.ToList();
+            try
             {
-                Items.Add(item);
+                list.AddRange(items);
+                //foreach(var item in items)
+                //{
+                //    items.Add(item);
+                //}
+                Items = new MvxObservableCollection<TodoItemViewModelBase>(list);
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("AddItemsToTheEnd Exception: " + ex.Message);
+            }
+            
         }
     }
 }

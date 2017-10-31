@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+using Android.Support.V4.Widget;
 using TodoTask.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
 
@@ -22,5 +14,17 @@ namespace TodoTask.Droid.Views
     )]
     public class MainActivityView : MvxAppCompatActivity<MainViewModel>
     {
+        public DrawerLayout DrawerLayout;
+
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.MainActivityView);
+
+            DrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+
+            if(bundle == null)
+                ViewModel.ShowMenu();
+        }
     }
 }

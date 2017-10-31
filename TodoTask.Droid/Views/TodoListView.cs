@@ -26,13 +26,7 @@ namespace TodoTask.Droid.Views
             list.Adapter = new CustomAdapter(this, (IMvxAndroidBindingContext)BindingContext);
             list.SetOnScrollListener(new CustomScrollListener());
         }
-
-        protected override void OnResume()
-        {
-            base.OnResume();
-            var viewModel = ViewModel as TodoListViewModel;
-            viewModel?.AppearingCommand?.Execute(null);
-        }
+      
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

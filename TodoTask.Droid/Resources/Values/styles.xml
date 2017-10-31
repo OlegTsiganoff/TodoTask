@@ -23,4 +23,8 @@
 
     <item name="android:textCursorDrawable">@null</item>
   </style>
+
+  <style name="AppTheme.Menu" parent="AppTheme.Base">
+    <item name="colorPrimary">@color/black</item>
+  </style>
 </resources>
